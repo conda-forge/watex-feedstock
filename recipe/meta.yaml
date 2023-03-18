@@ -2,8 +2,8 @@
 {% set version = "0.1.8rc2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: "https://github.com/WEgeophysics/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz"
@@ -14,7 +14,7 @@ build:
   noarch: python
   entry_points:
     - version= watex.cli:version
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -67,24 +67,21 @@ test:
     - pytest
 
 about:
-  home: "https://github.com/WEgeophysics/watex"
+  home: https://github.com/WEgeophysics/watex
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: "Machine learning research in water exploration"
+  summary: Machine learning research in water exploration
   description: |
     watex is a Python library to solve engineering problems 
     in the field of groundwater exploration. It brings 
-    intelligent approaches for reducing numerous losses 
-    during the hydro-geophysical exploration projects via 
-    the geophysical, hydrogeology, and geology methods. 
-    The library minimizes the unsuccessful drillings, 
+    intelligent approaches to minimize the unsuccessful drillings, 
     unsustainable boreholes, reduce the cost of the 
     hydrogeology parameter collections, predict the 
     groundwater flow rate, the level of water 
     inrush, recover the electromagnetic loss signals...
-  doc_url: "https://watex.readthedocs.io"
-  dev_url: "https://github.com/WEgeophysics/watex"
+  doc_url: https://watex.readthedocs.io
+  dev_url: https://github.com/WEgeophysics/watex
 
 extra:
   recipe-maintainers:
