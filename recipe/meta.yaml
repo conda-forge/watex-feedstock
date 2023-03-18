@@ -1,13 +1,13 @@
 {% set name = "watex" %}
-{% set version = "0.1.8rc1" %}
+{% set version = "0.1.8rc2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/WEgeophysics/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 2986ea4825c126752e77486895e7b0a6d05749c2f7eb8fa458a0466f2b762813
+  url: "https://github.com/WEgeophysics/{{name}}/archive/refs/tags/v{{ version }}.tar.gz"
+  sha256: c42fea11e8d53cb7bbbad81b93a422eaf74d88f445e872e10168d5fbbc739096
 
 build:
   number: 0
@@ -75,10 +75,7 @@ about:
   description: |
     watex is a Python library to solve engineering problems 
     in the field of groundwater exploration. It brings 
-    intelligent approaches for reducing numerous losses 
-    during the hydro-geophysical exploration projects via 
-    the geophysical, hydrogeology, and geology methods. 
-    The library minimizes the unsuccessful drillings, 
+    intelligent approaches to minimize the unsuccessful drillings, 
     unsustainable boreholes, reduce the cost of the 
     hydrogeology parameter collections, predict the 
     groundwater flow rate, the level of water 
