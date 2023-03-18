@@ -1,20 +1,20 @@
 {% set name = "watex" %}
-{% set version = "0.1.8rc1" %}
+{% set version = "0.1.8" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://github.com/WEgeophysics/{{name}}/archive/refs/tags/v{{ version }}.tar.gz"
-  sha256: 2986ea4825c126752e77486895e7b0a6d05749c2f7eb8fa458a0466f2b762813
+  url: https://github.com/WEgeophysics/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: f5b2ab18cfc264b76faf1d16b9e06aa46025e63385c4e1f1208a9382cf19b616
 
 build:
   number: 0
   noarch: python
   entry_points:
     - version= watex.cli:version
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -26,17 +26,19 @@ requirements:
     - scipy >=1.9.0
     - pandas >=1.4.0
     - pyyaml >=5.0.0
-    - openpyxl >=3.0.3
+    - openpyxl >=3.1.1
     - seaborn >=0.12.0
+    - joblib >=1.2.0
+    - six >=1.16.0 
     - xgboost >=1.5.0
     - pyproj >=3.3.0
     - python >=3.9
     - setuptools
     - pytables >=3.6.1
-    - h5py>=3.2.0
+    - h5py >=3.2.0
     - scikit-learn ==1.1.2
     - threadpoolctl ==3.1.0
-    - matplotlib ==3.5.2
+    - matplotlib-base ==3.5.2
     - tqdm 
     - click 
 
@@ -65,24 +67,24 @@ test:
     - pytest
 
 about:
-  home: "https://github.com/WEgeophysics/watex"
+  home: https://github.com/WEgeophysics/watex
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: "Machine learning research in water exploration"
+  summary: Machine learning research in water exploration
   description: |
     watex is a Python library to solve engineering problems 
     in the field of groundwater exploration. It brings 
     intelligent approaches for reducing numerous losses 
     during the hydro-geophysical exploration projects via 
     the geophysical, hydrogeology, and geology methods. 
-    The library minimizes the unsucessfull drillings, 
+    The library minimizes the unsuccessful drillings, 
     unsustainable boreholes, reduce the cost of the 
     hydrogeology parameter collections, predict the 
-    groundwater flow rate and the level of water 
+    groundwater flow rate, the level of water 
     inrush, recover the electromagnetic loss signals...
-  doc_url: "https://watex.readthedocs.io"
-  dev_url: "https://github.com/WEgeophysics/watex"
+  doc_url: https://watex.readthedocs.io
+  dev_url: https://github.com/WEgeophysics/watex
 
 extra:
   recipe-maintainers:
