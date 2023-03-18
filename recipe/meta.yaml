@@ -6,7 +6,7 @@ package:
   version: "{{ version }}"
 
 source:
-  url: "https://github.com/WEgeophysics/{{name}}/archive/refs/tags/v{{ version }}.tar.gz"
+  url: "https://github.com/WEgeophysics/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz"
   sha256: c42fea11e8d53cb7bbbad81b93a422eaf74d88f445e872e10168d5fbbc739096
 
 build:
