@@ -10,7 +10,7 @@ source:
   sha256: c42fea11e8d53cb7bbbad81b93a422eaf74d88f445e872e10168d5fbbc739096
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - version= watex.cli:version
