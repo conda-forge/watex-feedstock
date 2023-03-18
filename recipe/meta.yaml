@@ -1,5 +1,5 @@
 {% set name = "watex" %}
-{% set version = "0.1.8rc1" %}
+{% set version = "0.1.8rc2" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://github.com/WEgeophysics/{{name}}/archive/refs/tags/v{{ version }}.tar.gz"
-  sha256: 2986ea4825c126752e77486895e7b0a6d05749c2f7eb8fa458a0466f2b762813
+  sha256: c42fea11e8d53cb7bbbad81b93a422eaf74d88f445e872e10168d5fbbc739096
 
 build:
   number: 0
