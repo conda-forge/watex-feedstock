@@ -1,16 +1,16 @@
 {% set name = "watex" %}
-{% set version = "0.1.8rc2" %}
+{% set version = "0.1.9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: "https://github.com/WEgeophysics/{{name}}/archive/refs/tags/v{{ version }}.tar.gz"
-  sha256: c42fea11e8d53cb7bbbad81b93a422eaf74d88f445e872e10168d5fbbc739096
+  url: https://github.com/WEgeophysics/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 080041605abfb062c8aa4731d82c000fc51a514f4e81ee1ebf0c1417542f2111
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - version= watex.cli:version
@@ -29,7 +29,7 @@ requirements:
     - openpyxl >=3.1.1
     - seaborn >=0.12.0
     - joblib >=1.2.0
-    - six >=1.16.0 
+    - six >=1.16.0
     - xgboost >=1.5.0
     - pyproj >=3.3.0
     - python >=3.9
@@ -39,8 +39,8 @@ requirements:
     - scikit-learn ==1.1.2
     - threadpoolctl ==3.1.0
     - matplotlib-base ==3.5.2
-    - tqdm 
-    - click 
+    - tqdm
+    - click
 
 test:
   imports:
