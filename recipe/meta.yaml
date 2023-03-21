@@ -1,13 +1,13 @@
 {% set name = "watex" %}
-{% set version = "0.1.9" %}
+{% set version = "0.1.10" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 5dfe3bf06019527ad3a59fbf701427fb831a26d7f7d331496704da9829f242c4
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 33fc0c939028043ecdcb51ecf4dd1d36f8bc537dc127925c66d91108f1505ec1
 
 build:
   number: 0
@@ -29,7 +29,7 @@ requirements:
     - openpyxl >=3.1.1
     - seaborn >=0.12.0
     - joblib >=1.2.0
-    - six >=1.16.0 
+    - six >=1.16.0
     - xgboost >=1.7.0
     - pyproj >=3.3.0
     - python >=3.9
@@ -39,8 +39,8 @@ requirements:
     - scikit-learn ==1.2.1
     - threadpoolctl >=2.2.0
     - matplotlib-base ==3.5.3
-    - tqdm 
-    - click 
+    - tqdm
+    - click
 
 test:
   imports:
