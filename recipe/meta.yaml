@@ -1,5 +1,5 @@
 {% set name = "watex" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 77dd8ca6b551a04727159f1358b731f01706dfadc503e1192e4eaa645cc48427
+  sha256: 29666b0f4d86974788e062f08aeb253c2b55a45fc911230a153488723dfc63b8
 
 build:
   number: 0
