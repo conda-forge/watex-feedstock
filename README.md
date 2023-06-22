@@ -15,13 +15,10 @@ Documentation: https://watex.readthedocs.io
 
 watex is a Python library to solve engineering problems
 in the field of groundwater exploration. It brings
-intelligent approaches for reducing numerous losses
-during the hydro-geophysical exploration projects via
-the geophysical, hydrogeology, and geology methods.
-The library minimizes the unsucessfull drillings,
+intelligent approaches to minimize the unsuccessful drillings,
 unsustainable boreholes, reduce the cost of the
 hydrogeology parameter collections, predict the
-groundwater flow rate and the level of water
+groundwater flow rate, the level of water
 inrush, recover the electromagnetic loss signals...
 
 
